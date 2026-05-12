@@ -1,0 +1,33 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Node
+frontend/node_modules/
+
+# Build
+dist/
+build/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PostgreSQL
+*.sql
+
+# Cache
+.cache/
+
+#Venv
+venv/
