@@ -4,6 +4,8 @@ from sqlalchemy import text
 from app.db.database import engine
 from app.api.parser_routes import router as parser_router
 from app.api.indexer_routes import router as indexer_router
+from app.api.index_store_routes import router as index_store_router
+from app.db.init_db import init_database
 
 app = FastAPI(
     title="CodePulse",
@@ -12,6 +14,9 @@ app = FastAPI(
 )
 app.include_router(parser_router)
 app.include_router(indexer_router)
+app.include_router(index_store_router)
+
+init_database()
 
 @app.get("/")
 def health_check():
